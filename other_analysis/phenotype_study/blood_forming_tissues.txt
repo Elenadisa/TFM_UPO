@@ -1,0 +1,26 @@
+HP:0005543	Reduced protein C activity	1.54711756253494e-10
+HP:0001929	Reduced factor XI activity	1.1964591593445e-09
+HP:0004855	Reduced protein S activity	4.02082401306635e-09
+HP:0003256	Abnormality of the coagulation cascade	4.10609704099404e-09
+HP:0001976	Reduced antithrombin III activity	5.20472292209562e-09
+HP:0040246	Reduced antithrombin antigen	0.000257482069743353
+HP:0010989	Abnormality of the intrinsic pathway	0.00483282392484927
+HP:0008151	Prolonged prothrombin time	0.0051682706254304
+HP:0001928	Abnormality of coagulation	0.0108974588041564
+HP:0003645	Prolonged partial thromboplastin time	0.0111423605110584
+HP:0002850	Decreased circulating total IgM	0.0140608801468347
+HP:0001977	Abnormal thrombosis	0.0222897788620261
+HP:0001871	Abnormality of blood and blood-forming tissues	0.0303823339259391
+HP:0004315	Decreased circulating IgG level	0.0346077989580061
+HP:0002625	Deep venous thrombosis	0.039444415461247
+HP:0025244	Subretinal pigment epithelium hemorrhage	0.0408844388819363
+HP:0032061	Hypereosinophilia	0.0408844388819363
+HP:0003540	Impaired platelet aggregation	0.0408844388819363
+HP:0011858	Reduced factor IX activity	0.0408844388819363
+HP:0011883	Abnormal platelet granules	0.0408844388819363
+HP:0410292	Abnormal isohemagglutinin level	0.0408844388819363
+HP:0410242	Abnormal circulating IgG level	0.0408844388819363
+HP:0410243	Abnormal circulating IgM level	0.0408844388819363
+HP:0410240	Abnormal circulating IgA level	0.0408844388819363
+HP:0410295	Complete or near-complete absence of specific antibody response to tetanus vaccine	0.0408844388819363
+HP:0410305	Partial absence of specific antibody response to Haemophilus influenzae type b (Hib) vaccine	0.0408844388819363

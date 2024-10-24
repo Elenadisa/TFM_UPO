@@ -1,0 +1,8 @@
+HP:0000369	Low-set ears	0.000857781119887049
+HP:0000368	Low-set, posteriorly rotated ears	0.0148788283710215
+HP:0002265	Large fleshy ears	0.0152638895527248
+HP:0008587	Mild neurosensory hearing impairment	0.0408844388819363
+HP:0008529	Absence of acoustic reflex	0.0408844388819363
+HP:0011271	Prominent tragus	0.0408844388819363
+HP:0011247	Prominent superior crus of antihelix	0.0408844388819363
+HP:0008569	Microtia, second degree	0.0408844388819363

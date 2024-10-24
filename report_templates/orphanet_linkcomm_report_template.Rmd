@@ -1,0 +1,161 @@
+---
+title: Clusters Details Orphanet
+output: html_document
+---
+
+
+```{r  results='asis'}
+metric_table <- data[['orpha_table_metrics.txt']]
+  
+
+group_cluster_information <- function(df1, df2){
+  clusters <- unique(df1$Cluster)
+  cluster_list <- list()
+
+  for (i in clusters){
+    groups <- list()
+    hp_groups <- filter(df1, Cluster == clusters[i])
+
+    if (nrow(hp_groups) != 0) {
+      groups[["hpo"]] <- hp_groups
+    }
+    system_groups <- filter(df2, Cluster == clusters[i])
+    
+    if (nrow(system_groups) != 0) {
+      system_groups_sorted <- system_groups[order(-system_groups$Phenotype_coverage),]
+      groups[["system"]] <- system_groups_sorted
+      scores <- system_groups$Phenotype_coverage
+            score <- max(scores)
+            groups[["coherence_score"]] <- score
+        }else{
+            groups[["coherence_score"]] <- 0
+        }
+    name <- paste0("Cluster_#", i)
+        cluster_list[[name]] <- groups 
+  }
+
+
+  return(cluster_list)
+}
+
+
+
+
+```
+
+
+```{r  cho=FALSE, warning=FALSE, message=FALSE, results='asis'}
+
+
+clusters_hpo <- read.table("/mnt2/fscratch/users/bio_267_uma/elenads/disorders_glycosylation_upo/Orphanet/analysed_networks/glycosylation_disorders/clustering.R_0000/clusters_file_with_names", sep ="\t", quote="", stringsAsFactors = FALSE, header = TRUE)
+if(nrow(clusters_hpo) > 0){
+    for (i in 1:length(clusters_hpo$hpo)){
+      url <- paste0("https://hpo.jax.org/app/browse/term/", clusters_hpo$hpo[i])
+      clusters_hpo$hpo[i] <- text_spec(clusters_hpo$hpo[i], link = url)
+    }
+  }
+colnames(clusters_hpo) <- c("HPO", "Cluster", "Description")
+
+clusters_hpo1 <- read.table("/mnt2/fscratch/users/bio_267_uma/elenads/disorders_glycosylation_upo/Orphanet/analysed_networks/glycosylation_disorders/clustering.R_0000/clusters_file_with_names", sep ="\t", quote="", stringsAsFactors = FALSE, header = TRUE)
+colnames(clusters_hpo1) <- c("HPO", "Cluster", "Description")
+
+kegg <- read.table("/mnt2/fscratch/users/bio_267_uma/elenads/disorders_glycosylation_upo/Orphanet/analysed_networks/glycosylation_disorders/clusters_single_funsys_merger.py_0000/clusters_with_70_coherence_systems_KEGG_0.05", sep ="\t", quote="", stringsAsFactors = FALSE, header = FALSE)
+colnames(kegg) <- c("Cluster", "Cell function", "Description", "Phenotype_coverage", "Genes")
+if(nrow(kegg) > 0){
+    for (i in 1:length(kegg$"Cell function")){
+      url <- paste0("https://www.genome.jp/dbget-bin/www_bget?pathway+", kegg$"Cell function"[i])
+      kegg$"Cell function"[i] <- text_spec(kegg$"Cell function"[i], link = url)
+    }
+  }
+
+reactome <- read.table("/mnt2/fscratch/users/bio_267_uma/elenads/disorders_glycosylation_upo/Orphanet/analysed_networks/glycosylation_disorders/clusters_single_funsys_merger.py_0001/clusters_with_70_coherence_systems_Reactome_0.05", sep ="\t", quote="", stringsAsFactors = FALSE, header = FALSE)
+colnames(reactome) <- c("Cluster", "Cell function", "Description", "Phenotype_coverage", "Genes")
+if(nrow(reactome) > 0){  
+    for (i in 1:length(reactome$"Cell function")){
+      url <- paste0("https://reactome.org/content/detail/", reactome$"Cell function"[i])
+      reactome$"Cell function"[i] <- text_spec(reactome$"Cell function"[i], link = url)
+    }
+  }
+
+go_BP_df <- read.table("/mnt2/fscratch/users/bio_267_uma/elenads/disorders_glycosylation_upo/Orphanet/analysed_networks/glycosylation_disorders/clusters_single_funsys_merger.py_0002/clusters_with_70_coherence_systems_BP_0.05", sep ="\t", quote="", stringsAsFactors = FALSE, header = FALSE)
+colnames(go_BP_df) <- c("Cluster", "Cell function", "Description", "Phenotype_coverage", "Genes")
+go_BP <- delete_parental_terms(go_BP_df, "BP")
+if(nrow(go_BP) > 0){  
+    for (i in 1:length(go_BP$"Cell function")){
+      url <- paste0("http://amigo.geneontology.org/amigo/term/", go_BP$"Cell function"[i])
+      go_BP$"Cell function"[i] <- text_spec(go_BP$"Cell function"[i], link = url)
+    }
+  }
+
+
+go_MF_df <- read.table("/mnt2/fscratch/users/bio_267_uma/elenads/disorders_glycosylation_upo/Orphanet/analysed_networks/glycosylation_disorders/clusters_single_funsys_merger.py_0003/clusters_with_70_coherence_systems_MF_0.05", sep ="\t", quote="", stringsAsFactors = FALSE, header = FALSE)
+colnames(go_MF_df) <- c("Cluster", "Cell function", "Description", "Phenotype_coverage", "Genes")
+go_MF <- delete_parental_terms(go_MF_df, "MF")
+if(nrow(go_MF) > 0){  
+    for (i in 1:length(go_MF$"Cell function")){
+      url <- paste0("http://amigo.geneontology.org/amigo/term/", go_MF$"Cell function"[i])
+      go_MF$"Cell function"[i] <- text_spec(go_MF$"Cell function"[i], link = url)
+    }
+  }
+
+
+go_CC_df <- read.table("/mnt2/fscratch/users/bio_267_uma/elenads/disorders_glycosylation_upo/Orphanet/analysed_networks/glycosylation_disorders/clusters_single_funsys_merger.py_0004/clusters_with_70_coherence_systems_CC_0.05", sep ="\t", quote="", stringsAsFactors = FALSE, header = FALSE)
+colnames(go_CC_df) <- c("Cluster", "Cell function", "Description", "Phenotype_coverage", "Genes")
+go_CC <- delete_parental_terms(go_CC_df, "CC")
+if(nrow(go_CC) > 0){  
+    for (i in 1:length(go_CC$"Cell function")){
+      url <- paste0("http://amigo.geneontology.org/amigo/term/", go_CC$"Cell function"[i])
+      go_CC$"Cell function"[i] <- text_spec(go_CC$"Cell function"[i], link = url)
+    }
+  }
+
+orphanet_clusters_system <- rbind(kegg, reactome, go_BP, go_MF, go_CC)
+
+all_clusters_lst <- group_cluster_information(clusters_hpo, orphanet_clusters_system)
+
+ordered_cluster_lst <- order_a_list_by_vector(all_clusters_lst, "coherence_score")
+
+```
+
+```{r  results='asis'}
+#clusters_file
+clusters_file_cytoscape <- read.table("/mnt2/fscratch/users/bio_267_uma/elenads/disorders_glycosylation_upo/Orphanet/analysed_networks/glycosylation_disorders/clustering.R_0000/cytoscape_file", sep=" ", header=FALSE, quote="", stringsAsFactors = FALSE)
+clusters_file <- clusters_file_cytoscape[,c(1,3,5)]
+colnames(clusters_file) <- c("HPO-A", "HPO-B", "Cluster")
+
+
+for(i in 1:length(ordered_cluster_lst)){
+    list <- ordered_cluster_lst[[i]]
+    cluster_name <- unlist(strsplit(names(ordered_cluster_lst[i]), "_"))
+    cluster_number <- unlist(strsplit(names(ordered_cluster_lst[i]), "#"))[2]
+    if(!is.null(list[["system"]])){
+      cat("_ _ _", "\n", "_ _ _", "\n", "_ _ _", "\n")
+      list["coherence_score"] <- NULL
+      cat("# ", cluster_name, "\n", "\n")
+
+      cluster <- subset(clusters_file, Cluster == cluster_number)
+      hpo_names <- subset(clusters_hpo1, Cluster == cluster_number)
+      g <- graph.data.frame(cluster, directed = FALSE)
+      v <- V(g)$name
+      node_l <- unique(hpo_names$HPO)
+      label_l <- rep("x",length=length(v))
+
+      for(node in node_l) {     
+        data <- filter(hpo_names, HPO == node)
+        hpo <- data$HPO
+        label <- data$Description
+        label_l[match(hpo, v)] <- label
+      }
+      V(g)$labels <- label_l
+
+      plot(g, vertex.label=gsub(" ", "\n", V(g)$labels), vertex.shape="none", vertex.label.cex=c(0.9), vertex.label.color="black")
+
+      for(i in list){
+        print(knitr::kable(i, format="markdown", row.name=FALSE))
+        cat("\n")
+      }
+    }
+  }
+
+
+```

@@ -1,0 +1,112 @@
+HP:0000253	Progressive microcephaly	8.44062291797619e-10
+HP:0008947	Infantile muscular hypotonia	4.67260683315005e-07
+HP:0030099	Reduced muscle fiber alpha dystroglycan	6.00399817951102e-07
+HP:0003560	Muscular dystrophy	1.73328623199646e-06
+HP:0001290	Generalized hypotonia	1.80847898392289e-06
+HP:0009125	Lipodystrophy	3.57195291912557e-06
+HP:0030046	Hypoglycosylation of alpha-dystroglycan	1.2750035705093e-05
+HP:0000938	Osteopenia	3.33623507870365e-05
+HP:0001305	Dandy-Walker malformation	6.87611871862322e-05
+HP:0000470	Short neck	0.000148341083169782
+HP:0002947	Cervical kyphosis	0.000257482069743353
+HP:0008905	Rhizomelia	0.00029650617594143
+HP:0002673	Coxa valga	0.00029650617594143
+HP:0000252	Microcephaly	0.000519186213295567
+HP:0008434	Hypoplastic cervical vertebrae	0.00121211093412211
+HP:0001234	Hitchhiker thumb	0.00165517135707336
+HP:0100865	Broad ischia	0.00165517135707336
+HP:0003414	Atlantoaxial dislocation	0.00165517135707336
+HP:0002421	Poor head control	0.00170119127609346
+HP:0012385	Camptodactyly	0.00180920849170265
+HP:0008981	Calf muscle hypertrophy	0.00192986275962165
+HP:0008807	Acetabular dysplasia	0.00205839120224373
+HP:0009826	Limb undergrowth	0.0023596934395375
+HP:0002751	Kyphoscoliosis	0.00257773452925762
+HP:0003026	Short long bone	0.00285527571524325
+HP:0002650	Scoliosis	0.00315916201900377
+HP:0009824	Upper limb undergrowth	0.0031960893200156
+HP:0003325	Limb-girdle muscle weakness	0.00327378739105493
+HP:0002761	Generalized joint hypermobility	0.00414830155482693
+HP:0008443	Neuropathic spinal arthropathy	0.004652698491032
+HP:0003551	Difficulty climbing stairs	0.00479167837135463
+HP:0002813	Abnormal limb bone morphology	0.00483282392484927
+HP:0006118	Shortening of all distal phalanges of the fingers	0.00483282392484927
+HP:0004582	Irregularity of vertebral bodies	0.00483282392484927
+HP:0004993	Slender long bones with narrow diaphyses	0.00483282392484927
+HP:0000924	Abnormality of the skeletal system	0.00563688008145573
+HP:0009381	Short finger	0.00860936584900356
+HP:0010049	Short metacarpal	0.00862601763379133
+HP:0030197	Fatigable weakness of skeletal muscles	0.00940816577995519
+HP:0005616	Accelerated skeletal maturation	0.0098433049805929
+HP:0001382	Joint hypermobility	0.0107262811531158
+HP:0001156	Brachydactyly	0.0127283257070545
+HP:0007552	Abnormal subcutaneous fat tissue distribution	0.0152638895527248
+HP:0003403	EMG: decremental response of compound muscle action potential to repetitive nerve stimulation	0.0152638895527248
+HP:0001476	Delayed closure of the anterior fontanelle	0.0152638895527248
+HP:0003375	Narrow greater sciatic notch	0.0152638895527248
+HP:0001252	Hypotonia	0.0171211208800222
+HP:0003016	Metaphyseal widening	0.0173725941798501
+HP:0001230	Broad metacarpals	0.0222897788620261
+HP:0045060	Aplasia/hypoplasia involving bones of the extremities	0.0222897788620261
+HP:0006385	Short lower limbs	0.0222897788620261
+HP:0009124	Abnormal adipose tissue morphology	0.0222897788620261
+HP:0003691	Scapular winging	0.0252976692312338
+HP:0003311	Hypoplasia of the odontoid process	0.0303823339259391
+HP:0001591	Bell-shaped thorax	0.0303823339259391
+HP:0001847	Long hallux	0.0303823339259391
+HP:0008936	Axial hypotonia	0.0316346947926962
+HP:0001374	Congenital hip dislocation	0.0346077989580061
+HP:0003199	Decreased muscle mass	0.0346077989580061
+HP:0100807	Long fingers	0.0346077989580061
+HP:0000347	Micrognathia	0.0346439686458248
+HP:0002938	Lumbar hyperlordosis	0.0392524492847027
+HP:0003707	Calf muscle pseudohypertrophy	0.039444415461247
+HP:0000932	Abnormal posterior cranial fossa morphology	0.039444415461247
+HP:0010557	Overlapping fingers	0.039444415461247
+HP:0020110	Bone fracture	0.039444415461247
+HP:0005108	Abnormal intervertebral disk morphology	0.039444415461247
+HP:0011842	Abnormal skeletal morphology	0.0399072853003455
+HP:0009028	Generalized weakness of limb muscles	0.0408844388819363
+HP:0030205	Increased jitter at single fiber EMG	0.0408844388819363
+HP:0025264	Stiff ankle	0.0408844388819363
+HP:0008829	Delayed femoral head ossification	0.0408844388819363
+HP:0040072	Abnormal forearm bone morphology	0.0408844388819363
+HP:0004037	Abnormal ulnar epiphysis morphology	0.0408844388819363
+HP:0004002	Flattened radial epiphyses	0.0408844388819363
+HP:0012427	Increased femoral anteversion	0.0408844388819363
+HP:0003977	Deformed radius	0.0408844388819363
+HP:0003959	Deformed forearm bones	0.0408844388819363
+HP:0000918	Scapular exostoses	0.0408844388819363
+HP:0030883	Femoroacetabular impingement	0.0408844388819363
+HP:0009768	Broad phalanges of the hand	0.0408844388819363
+HP:0004565	Severe platyspondyly	0.0408844388819363
+HP:0012107	Increased fibular diameter	0.0408844388819363
+HP:0008108	Advanced tarsal ossification	0.0408844388819363
+HP:0000895	Lateral clavicle hook	0.0408844388819363
+HP:0010486	Abnormality of the hypothenar eminence	0.0408844388819363
+HP:0040173	Abnormality of the tongue muscle	0.0408844388819363
+HP:0009767	Aplasia/Hypoplasia of the phalanges of the hand	0.0408844388819363
+HP:0010173	Aplasia/Hypoplasia of the phalanges of the toes	0.0408844388819363
+HP:0005478	Prominent frontal sinuses	0.0408844388819363
+HP:0040047	Abnormal right hemidiaphragm morphology	0.0408844388819363
+HP:0003733	Thigh hypertrophy	0.0408844388819363
+HP:0009970	Partial duplication of the proximal phalanx of the 3rd finger	0.0408844388819363
+HP:0009966	Complete duplication of the middle phalanx of the 3rd finger	0.0408844388819363
+HP:0006152	Proximal symphalangism of hands	0.0408844388819363
+HP:0009608	Complete duplication of proximal phalanx of the thumb	0.0408844388819363
+HP:0100347	Tibial deviation of the 5th toe	0.0408844388819363
+HP:0100345	Tibial deviation of the 2nd toe	0.0408844388819363
+HP:0100266	Synostosis of carpals/tarsals	0.0408844388819363
+HP:0006165	Proportionate shortening of all digits	0.0408844388819363
+HP:0031869	Recurrent joint dislocation	0.0408844388819363
+HP:0003697	Scapuloperoneal amyotrophy	0.0408844388819363
+HP:0010510	Hypermobility of toe joints	0.0408844388819363
+HP:0100899	Sclerosis of finger phalanx	0.0408844388819363
+HP:0030194	Fatigable weakness of speech muscles	0.0408844388819363
+HP:0011327	Posterior plagiocephaly	0.0408844388819363
+HP:0030092	Reduced muscle fiber merosin	0.0408844388819363
+HP:0005678	Anterior atlanto-occipital dislocation	0.0408844388819363
+HP:0001385	Hip dysplasia	0.0442381011575097
+HP:0000269	Prominent occiput	0.0455936212987539
+HP:0000308	Microretrognathia	0.0455936212987539
+HP:0003121	Limb joint contracture	0.0493849060241655

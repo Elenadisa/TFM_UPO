@@ -1,0 +1,24 @@
+HP:0000973	Cutis laxa	0.000154044306868272
+HP:0007457	Prominent veins on trunk	0.00940816577995519
+HP:0002286	Fair hair	0.00940816577995519
+HP:0007552	Abnormal subcutaneous fat tissue distribution	0.0152638895527248
+HP:0025167	Fragmented elastic fibers in the dermis	0.0152638895527248
+HP:0000974	Hyperextensible skin	0.0196845012601484
+HP:0007392	Excessive wrinkled skin	0.0210822327273935
+HP:0001804	Hypoplastic fingernail	0.0251918739588562
+HP:0001027	Soft, doughy skin	0.0303823339259391
+HP:0000527	Long eyelashes	0.0392524492847027
+HP:0007456	Progressive reticulate hyperpigmentation	0.0408844388819363
+HP:0031293	Digital pitting scar	0.0408844388819363
+HP:0031525	Keratoacanthoma	0.0408844388819363
+HP:0031292	Cutaneous abscess	0.0408844388819363
+HP:0010814	Abnormal position of hair whorl	0.0408844388819363
+HP:0004523	Long eyebrows	0.0408844388819363
+HP:0006114	Multiple palmar creases	0.0408844388819363
+HP:0008113	Multiple plantar creases	0.0408844388819363
+HP:0007441	Hyperpigmented/hypopigmented macules	0.0408844388819363
+HP:0004681	Deep longitudinal plantar crease	0.0408844388819363
+HP:0000998	Hypertrichosis	0.0455936212987539
+HP:0100874	Thick hair	0.0493849060241655
+HP:0005989	Redundant neck skin	0.0493849060241655
+HP:0100678	Premature skin wrinkling	0.0493849060241655

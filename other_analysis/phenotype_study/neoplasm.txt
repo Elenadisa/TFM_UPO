@@ -1,0 +1,4 @@
+HP:0004664	Facial midline hemangioma	0.0408844388819363
+HP:0000918	Scapular exostoses	0.0408844388819363
+HP:0031525	Keratoacanthoma	0.0408844388819363
+HP:0030442	Anal margin squamous cell carcinoma	0.0408844388819363

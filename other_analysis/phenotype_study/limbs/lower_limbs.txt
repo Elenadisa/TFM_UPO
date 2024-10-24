@@ -1,0 +1,21 @@
+HP:0002673	Coxa valga	0.00029650617594143
+HP:0008981	Calf muscle hypertrophy	0.00192986275962165
+HP:0008807	Acetabular dysplasia	0.00205839120224373
+HP:0001763	Pes planus	0.00392775230046175
+HP:0001762	Talipes equinovarus	0.00859717295665932
+HP:0006385	Short lower limbs	0.0222897788620261
+HP:0001847	Long hallux	0.0303823339259391
+HP:0001374	Congenital hip dislocation	0.0346077989580061
+HP:0003707	Calf muscle pseudohypertrophy	0.039444415461247
+HP:0008829	Delayed femoral head ossification	0.0408844388819363
+HP:0012427	Increased femoral anteversion	0.0408844388819363
+HP:0030883	Femoroacetabular impingement	0.0408844388819363
+HP:0012107	Increased fibular diameter	0.0408844388819363
+HP:0008108	Advanced tarsal ossification	0.0408844388819363
+HP:0010173	Aplasia/Hypoplasia of the phalanges of the toes	0.0408844388819363
+HP:0003733	Thigh hypertrophy	0.0408844388819363
+HP:0100347	Tibial deviation of the 5th toe	0.0408844388819363
+HP:0100345	Tibial deviation of the 2nd toe	0.0408844388819363
+HP:0008113	Multiple plantar creases	0.0408844388819363
+HP:0004681	Deep longitudinal plantar crease	0.0408844388819363
+HP:0010510	Hypermobility of toe joints	0.0408844388819363

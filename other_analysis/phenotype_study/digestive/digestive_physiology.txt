@@ -1,0 +1,6 @@
+HP:0011968	Feeding difficulties	0.000234965411528757
+HP:0002020	Gastroesophageal reflux	0.00381520754128616
+HP:0001410	Decreased liver function	0.00634387179886238
+HP:0040288	Nasogastric tube feeding	0.0252976692312338
+HP:0011471	Gastrostomy tube feeding in infancy	0.0374596021999038
+HP:0031146	Impaired oral bolus formation	0.0408844388819363

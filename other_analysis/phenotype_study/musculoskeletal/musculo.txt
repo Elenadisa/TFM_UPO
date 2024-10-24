@@ -1,0 +1,27 @@
+HP:0008947	Infantile muscular hypotonia	4.67260683315005e-07
+HP:0030099	Reduced muscle fiber alpha dystroglycan	6.00399817951102e-07
+HP:0003560	Muscular dystrophy	1.73328623199646e-06
+HP:0001290	Generalized hypotonia	1.80847898392289e-06
+HP:0030046	Hypoglycosylation of alpha-dystroglycan	1.2750035705093e-05
+HP:0002421	Poor head control	0.00170119127609346
+HP:0012385	Camptodactyly	0.00180920849170265
+HP:0008981	Calf muscle hypertrophy	0.00192986275962165
+HP:0003325	Limb-girdle muscle weakness	0.00327378739105493
+HP:0003551	Difficulty climbing stairs	0.00479167837135463
+HP:0030197	Fatigable weakness of skeletal muscles	0.00940816577995519
+HP:0003403	EMG: decremental response of compound muscle action potential to repetitive nerve stimulation	0.0152638895527248
+HP:0001252	Hypotonia	0.0171211208800222
+HP:0003691	Scapular winging	0.0252976692312338
+HP:0008936	Axial hypotonia	0.0316346947926962
+HP:0003199	Decreased muscle mass	0.0346077989580061
+HP:0003707	Calf muscle pseudohypertrophy	0.039444415461247
+HP:0009028	Generalized weakness of limb muscles	0.0408844388819363
+HP:0030205	Increased jitter at single fiber EMG	0.0408844388819363
+HP:0010486	Abnormality of the hypothenar eminence	0.0408844388819363
+HP:0040173	Abnormality of the tongue muscle	0.0408844388819363
+HP:0040047	Abnormal right hemidiaphragm morphology	0.0408844388819363
+HP:0003733	Thigh hypertrophy	0.0408844388819363
+HP:0003697	Scapuloperoneal amyotrophy	0.0408844388819363
+HP:0030194	Fatigable weakness of speech muscles	0.0408844388819363
+HP:0030092	Reduced muscle fiber merosin	0.0408844388819363
+HP:0003121	Limb joint contracture	0.0493849060241655

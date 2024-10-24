@@ -1,0 +1,15 @@
+HP:0011995	Atrial septal dilatation	0.00165517135707336
+HP:0002401	Stroke-like episode	0.004652698491032
+HP:0007457	Prominent veins on trunk	0.00940816577995519
+HP:0001644	Dilated cardiomyopathy	0.0110464075426282
+HP:0025169	Left ventricular systolic dysfunction	0.0152638895527248
+HP:0001433	Hepatosplenomegaly	0.0153190080303779
+HP:0002616	Aortic root aneurysm	0.0346077989580061
+HP:0025244	Subretinal pigment epithelium hemorrhage	0.0408844388819363
+HP:0004664	Facial midline hemangioma	0.0408844388819363
+HP:0031625	Pseudoaneurysm	0.0408844388819363
+HP:0500173	Reflex asystolic syncope	0.0408844388819363
+HP:0012305	Coarctation of the descending aortic arch	0.0408844388819363
+HP:0008776	Abnormal renal artery morphology	0.0408844388819363
+HP:0012727	Thoracic aortic aneurysm	0.0408844388819363
+HP:0005182	Bicuspid pulmonary valve	0.0408844388819363

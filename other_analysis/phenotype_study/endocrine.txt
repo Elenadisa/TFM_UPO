@@ -1,0 +1,2 @@
+HP:0000830	Anterior hypopituitarism	0.00860936584900356
+HP:0003164	Hypothalamic gonadotropin-releasing hormone deficiency	0.0408844388819363

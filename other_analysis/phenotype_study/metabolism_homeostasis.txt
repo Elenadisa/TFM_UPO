@@ -1,0 +1,32 @@
+HP:0003642	Type I transferrin isoform profile	2.21918325749665e-13
+HP:0002910	Elevated circulating hepatic transaminase concentration	1.31307713784579e-08
+HP:0012301	Type II transferrin isoform profile	6.00399817951102e-07
+HP:0003160	Abnormal isoelectric focusing of serum transferrin	1.2750035705093e-05
+HP:0003236	Elevated circulating creatine kinase concentration	2.93620643716024e-05
+HP:0012345	Abnormal glycosylation	6.63450731854039e-05
+HP:0003563	Decreased LDL cholesterol concentration	0.000257482069743353
+HP:0012050	Anasarca	0.00165517135707336
+HP:0012363	Decreased sialylation of O-linked protein glycosylation	0.00165517135707336
+HP:0003073	Hypoalbuminemia	0.0023596934395375
+HP:0012379	Abnormal circulating enzyme concentration or activity	0.00429483662091474
+HP:0000969	Edema	0.00715480487105453
+HP:0002850	Decreased circulating total IgM	0.0140608801468347
+HP:0001789	Hydrops fetalis	0.0252976692312338
+HP:0004315	Decreased circulating IgG level	0.0346077989580061
+HP:0003655	Reduced level of N-acetylglucosaminyltransferase II	0.0408844388819363
+HP:0012592	Albuminuria	0.0408844388819363
+HP:0012509	Reduced thyroxin-binding globulin	0.0408844388819363
+HP:0012348	Decreased galactosylation of N-linked protein glycosylation	0.0408844388819363
+HP:0012358	Abnormal protein O-linked glycosylation	0.0408844388819363
+HP:0012347	Abnormal protein N-linked glycosylation	0.0408844388819363
+HP:0003282	Low alkaline phosphatase	0.0408844388819363
+HP:0410292	Abnormal isohemagglutinin level	0.0408844388819363
+HP:0025458	Decreased CSF albumin concentration	0.0408844388819363
+HP:0025457	Decreased CSF protein concentration	0.0408844388819363
+HP:0040209	Decreased CSF biopterin level	0.0408844388819363
+HP:0012340	Decreased resting energy expenditure	0.0408844388819363
+HP:0410242	Abnormal circulating IgG level	0.0408844388819363
+HP:0410243	Abnormal circulating IgM level	0.0408844388819363
+HP:0410240	Abnormal circulating IgA level	0.0408844388819363
+HP:0410295	Complete or near-complete absence of specific antibody response to tetanus vaccine	0.0408844388819363
+HP:0410305	Partial absence of specific antibody response to Haemophilus influenzae type b (Hib) vaccine	0.0408844388819363

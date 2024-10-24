@@ -1,0 +1,8 @@
+HP:0002850	Decreased circulating total IgM	0.0140608801468347
+HP:0004315	Decreased circulating IgG level	0.0346077989580061
+HP:0410292	Abnormal isohemagglutinin level	0.0408844388819363
+HP:0410242	Abnormal circulating IgG level	0.0408844388819363
+HP:0410243	Abnormal circulating IgM level	0.0408844388819363
+HP:0410240	Abnormal circulating IgA level	0.0408844388819363
+HP:0410295	Complete or near-complete absence of specific antibody response to tetanus vaccine	0.0408844388819363
+HP:0410305	Partial absence of specific antibody response to Haemophilus influenzae type b (Hib) vaccine	0.0408844388819363

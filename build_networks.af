@@ -1,0 +1,239 @@
+build_phen_phen_network){
+	resources: -m 2gb -t '7-00:00:00' -n 'cal'
+	#GET COMORBIDITY NETWORK THROUGH A BIPARTITE NETWORK (PHENOTYPE-PHENOTYPE PAIRS)
+	#PYTHON
+	source ~soft_bio_267/initializes/init_python
+	#module load python/3.9.13
+	PATH=$current_dir'/scripts/py_scripts':$PATH
+	export PATH
+
+	#get network layers of the bipartite network
+	LAYER_omim='diseases,OMIM:;hpo,HP:'
+	LAYER_orphanet='diseases,ORPHA:;hpo,HP:'
+
+	?
+
+	#execute NetAnalyzer to get phen-phen relationships
+	
+	if [ $database == "OMIM" ];
+	then
+	        netanalyzer -i $disease2phen -l $LAYER_omim -m $metric_type -u 'hpo;diseases' -a phen2phen_net
+
+	else 
+	        netanalyzer -i $disease2phen -l $LAYER_orphanet -m $metric_type -u 'hpo;diseases' -a phen2phen_net
+	
+	fi
+
+	echo -e  "glycosylation_disorders\tglycosylation_disorders\tTotal_phenotype_pairs\t`wc -l  phen2phen_net | cut -d ' ' -f 1` " >> ../metrics
+	
+	#Select pairs with HyI >= 2
+	awk '{if($3 >= $association_thresold) print $0}' phen2phen_net > more_spec_pairs_metric
+	echo -e  "glycosylation_disorders\tglycosylation_disorders\tPairs_HyI_2\t`wc -l  more_spec_pairs_metric | cut -d ' ' -f 1` " >> ../metrics
+
+	#Select pairs with representative phenotypes (CDG phenotypes)
+	selecting_phenotype_pairs.py -p more_spec_pairs_metric -l $list_glycosylation_disorders_hpo > glycosylation_disorders
+	echo -e  "glycosylation_disorders\tglycosylation_disorders\tglycosylation_pairs_number\t`wc -l  glycosylation_disorders | cut -d ' ' -f 1` " >> ../metrics
+}
+
+
+generate_shuffle_random_glycosylation_sets){
+	#GET RANDOM NETWORK
+	#LOAD PYTHON
+	source ~soft_bio_267/initializes/init_python
+	module load python/3.8.10
+	module load R/4.1.0
+	PATH=$current_dir'/scripts/py_scripts':$PATH
+	PATH=$current_dir'/scripts/rscripts':$PATH
+	export PATH
+	mkdir shuffled_pairs
+	mkdir HyI2
+
+	LAYER_omim='diseases,OMIM:;hpo,HP:'
+	LAYER_orphanet='diseases,ORPHA:;hpo,HP:'
+
+	for i in {1..$number_of_random_models}
+	do
+	?
+		#Randomize disease-phenotype relationships
+		shuffle_relationships.R -i $disease2phen -o shuffled_pairs/disease2phen_$i.txt
+
+		#Calculate phenotype-phenotype relationships
+		if [ $database == "OMIM" ];
+		then
+	       	netanalyzer -i shuffled_pairs/disease2phen_$i.txt -l $LAYER_omim -m $metric_type -u 'hpo;diseases' -a shuffled_phen2phen_net_$i	       	
+		else 
+	        netanalyzer -i shuffled_pairs/disease2phen_$i.txt -l $LAYER_orphanet -m $metric_type -u 'hpo;diseases' -a shuffled_phen2phen_net_$i	        	
+		fi
+
+		echo -e  "shuffled_random_pairs_$i\tshuffled_random_pairs\tTotal_phenotype_pairs\t`wc -l  shuffled_phen2phen_net_$i | cut -d ' ' -f 1` " >> ../metrics
+
+		#Select pairs with HyI >= 2
+		awk '{if($3 >= $association_thresold) print $0}' shuffled_phen2phen_net_$i > HyI2/HyI2_pairs_metrics_$i
+		echo -e  "shuffled_random_pairs_$i\tshuffled_random_pairs\tPairs_HyI_2\t`wc -l  HyI2/HyI2_pairs_metrics_$i | cut -d ' ' -f 1` " >> ../metrics
+
+		#Select pairs with representative phenotypes (CDG phenotypes)
+		selecting_phenotype_pairs.py -p HyI2/HyI2_pairs_metrics_$i -l $list_glycosylation_disorders_hpo > shuffled_random_pairs_$i
+		echo -e  "shuffled_random_pairs_$i\tshuffled_random_pairs\tglycosylation_pairs_number\t`wc -l  shuffled_random_pairs_$i | cut -d ' ' -f 1` " >> ../metrics
+
+		
+	done 
+}
+
+generate_vertexsort_random_glycosylation_sets){
+	#GET RANDOM NETWORK
+	#LOAD PYTHON
+	source ~soft_bio_267/initializes/init_python
+	module load python/3.8.10
+	module load R/4.1.0
+
+	PATH=$current_dir'/scripts/py_scripts':$PATH
+	PATH=$current_dir'/scripts/rscripts':$PATH
+	export PATH
+	mkdir shuffled_pairs
+	mkdir HyI2
+
+	LAYER_omim='diseases,OMIM:;hpo,HP:'
+	LAYER_orphanet='diseases,ORPHA:;hpo,HP:'
+
+	for i in {1..$number_of_random_models}
+	do
+	?
+		#Randomize disease-phenotype relationships
+		generate_dpr_random_model.R -i $disease2phen -o shuffled_pairs/disease2phen_$i.txt
+
+		#Calculate phenotype-phenotype relationships
+		if [ $database == "OMIM" ];
+		then
+	       	netanalyzer -i shuffled_pairs/disease2phen_$i.txt -l $LAYER_omim -m $metric_type -u 'hpo;diseases' -a shuffled_phen2phen_net_$i	       	
+		else 
+	        netanalyzer -i shuffled_pairs/disease2phen_$i.txt -l $LAYER_orphanet -m $metric_type -u 'hpo;diseases' -a shuffled_phen2phen_net_$i	        	
+		fi
+
+		echo -e  "vertexsort_random_pairs_$i\tvertexsort_random_pairs\tTotal_phenotype_pairs\t`wc -l  shuffled_phen2phen_net_$i | cut -d ' ' -f 1` " >> ../metrics
+
+		#Select pairs with HyI >= 2
+		awk '{if($3 >= $association_thresold) print $0}' shuffled_phen2phen_net_$i > HyI2/HyI2_pairs_metrics_$i
+		echo -e  "vertexsort_random_pairs_$i\tvertexsort_random_pairs\tPairs_HyI_2\t`wc -l  HyI2/HyI2_pairs_metrics_$i | cut -d ' ' -f 1` " >> ../metrics
+
+		#Select pairs with representative phenotypes (CDG phenotypes)
+		selecting_phenotype_pairs.py -p HyI2/HyI2_pairs_metrics_$i -l $list_glycosylation_disorders_hpo > vertexsort_random_pairs_$i
+		echo -e  "vertexsort_random_pairs_$i\tvertexsort_random_pairs\tglycosylation_pairs_number\t`wc -l  vertexsort_random_pairs_$i | cut -d ' ' -f 1` " >> ../metrics
+
+		
+	done 
+}
+
+collect_nets){
+	resources: -m 1gb -t '7-00:00:00' -n 'cal'
+	#COLLECT NETS
+	rm -rf real_networks
+	mkdir real_networks
+	rm -rf random_networks
+	mkdir random_networks
+
+	?
+	#save nets together
+	ln -s build_phen_phen_network)/glycosylation_disorders real_networks
+	ln -s generate_shuffle_random_glycosylation_sets)/shuffled_random_pairs_* random_networks
+	ln -s generate_vertexsort_random_glycosylation_sets)/vertexsort_random_pairs_* random_networks
+}
+
+
+get_phenotype_genes_pairs){
+	resources: -m 2gb -t '7-00:00:00' -n 'cal'
+	#GET PHENOTYPE-GENE PAIRS THROUGH A TRIPARTITE NETWORK
+	# LOAD python
+	source ~soft_bio_267/initializes/init_python
+
+	#get network layers of the tripartite network
+	LAYERS_omim='hpo,HP;disease,OMIM;genes,[0-9]'
+	LAYERS_orphanet='hpo,HP;disease,ORPHA;genes,[0-9]'
+
+	mkdir test
+	?
+	cut -f 6,3 $dictionary | sort -u > disease_hpo
+	cut -f 1,6 $dictionary | sort -u > disease_genes
+	cat disease_hpo disease_genes > tripartite
+	
+	#execute NetAnalyzer to get phen-gene relationships
+	if [ $database == "OMIM" ];
+	then
+	        
+	      netanalyzer -i tripartite -l $LAYERS_omim -m $metric_type -u 'hpo,genes;disease' -a phen2gene.txt -N	
+
+	else 
+	      netanalyzer -i tripartite -l $LAYERS_orphanet -m $metric_type -u 'hpo,genes;disease' -a phen2gene.txt -N	
+	
+	fi
+
+	echo -e  "Number_of_phen2gene_pairs\t`wc -l  phen2gene.txt | cut -d ' ' -f 1` " >> ../gene_metrics
+	echo -e  "Number_of_HPO_with_genes\t`cut -f 1  phen2gene.txt | sort -u | wc -l` " >> ../gene_metrics
+	echo -e  "Number_of_genes\t`cut -f 2  phen2gene.txt | sort -u | wc -l` " >> ../gene_metrics
+
+	#Select significant phenotype-gene relationships
+	awk '{if($3 >= 2) print $0}' phen2gene.txt > test/phen2gene_HyI_2.txt
+	echo -e  "Number_of_phen2gene_pairs_HyI_2\t`wc -l  test/phen2gene_HyI_2.txt | cut -d ' ' -f 1` " >> ../gene_metrics
+	echo -e  "Number_of_HPO_HyI_2\t`cut -f 1  test/phen2gene_HyI_2.txt | sort -u | wc -l` " >> ../gene_metrics
+	echo -e  "Number_of_genes_HyI_2\t`cut -f 2  test/phen2gene_HyI_2.txt | sort -u | wc -l` " >> ../gene_metrics
+
+	#Select specific phenotype-gene relationships (CDG_phenotypes-gene)
+	grep -Fwf $list_glycosylation_disorders_hpo test/phen2gene_HyI_2.txt > test/glycosylation_phen2gene_HyI_2.txt
+	echo -e  "glycosylation_phenotypes_with_genes_HyI_2\t`cut -f 1  test/glycosylation_phen2gene_HyI_2.txt | sort -u | wc -l` " >> ../gene_metrics
+	echo -e  "glycosylation_genes_HyI_2\t`cut -f 2  test/glycosylation_phen2gene_HyI_2.txt | sort -u | wc -l` " >> ../gene_metrics
+
+}
+
+single_term_enrichment_analysis_[KEGG;Reactome;BP;MF;CC]){
+	#OBTAIN PHENOTYPE-FUNCTION PAIRS 
+	#LOAD R
+	module load R/4.1.0
+	source ~soft_bio_267/initializes/init_degenes_hunter
+	PATH=$current_dir'/scripts/rscripts':$PATH
+	export PATH
+	
+	parsed_p_values=`echo '$p_values' | tr '/' ' '`
+	for PVALUE in $parsed_p_values
+	do
+		?
+
+		#execute clusterProfiler and ReactomePA to get phenotype-function relationships
+
+		group_terms.R -i get_phenotype_genes_pairs)/'test/phen2gene_HyI_2.txt' -o phen2gene_HyI_2.txt
+		clusters_to_enrichment.R -p $PVALUE  -q 0.2 -F -i phen2gene_HyI_2.txt -O "Human" -k "ENTREZID" -o enrich_(*)_$PVALUE -f (*) -M 'R'
+
+		echo -e  "Phenotypes_with_(*)_$PVALUE\t`cut -f 1 enrich_(*)_$PVALUE/enr_cls_(*).csv | sort -u | wc -l` " >> ../gene_metrics
+		echo -e  "Total_(*)_terms_$PVALUE\t`cut -f 2 enrich_(*)_$PVALUE/enr_cls_(*).csv| sort -u | wc -l` " >> ../gene_metrics
+
+		#Obtain phenotype specific funtion relationships (CDG_phenotypes-functions)
+		grep -Fwf $list_glycosylation_disorders_hpo enrich_(*)_$PVALUE/enr_cls_(*).csv > glycosylation_phen2(*)_$PVALUE.txt
+		echo -e  "Glycosylation_phenotypes_with_(*)_$PVALUE\t`cut -f 1  glycosylation_phen2(*)_$PVALUE.txt | sort -u | wc -l` " >> ../gene_metrics
+		echo -e  "Glycosylation_(*)_$PVALUE\t`cut -f 2 glycosylation_phen2(*)_$PVALUE.txt | sort -u | wc -l` " >> ../gene_metrics
+		
+	done
+}
+
+collect_single_enrichment_analysis){
+	resources: -m 1gb -t '7-00:00:00' -n 'cal'
+	#COLLECT ENRICHMENT ANALYSIS RESULTS IN THE SAME DIRECTORY
+	parsed_p_values=`echo '$p_values' | tr '/' ' '`
+	for PVALUE in $parsed_p_values
+	do
+		mkdir enrichment_all_$PVALUE
+		mkdir enrichment_glycosylation_$PVALUE
+		?
+
+		ln -s single_term_enrichment_analysis_BP)/enrich_BP_$PVALUE/enr_cls_BP.csv enrichment_all_$PVALUE
+		ln -s single_term_enrichment_analysis_MF)/enrich_MF_$PVALUE/enr_cls_MF.csv enrichment_all_$PVALUE
+		ln -s single_term_enrichment_analysis_CC)/enrich_CC_$PVALUE/enr_cls_CC.csv enrichment_all_$PVALUE
+		ln -s single_term_enrichment_analysis_KEGG)/enrich_KEGG_$PVALUE/enr_cls_KEGG.csv enrichment_all_$PVALUE
+		ln -s single_term_enrichment_analysis_Reactome)/enrich_Reactome_$PVALUE/enr_cls_Reactome.csv enrichment_all_$PVALUE
+
+
+		ln -s single_term_enrichment_analysis_BP)/glycosylation_phen2BP_$PVALUE.txt enrichment_glycosylation_$PVALUE
+		ln -s single_term_enrichment_analysis_MF)/glycosylation_phen2MF_$PVALUE.txt enrichment_glycosylation_$PVALUE
+		ln -s single_term_enrichment_analysis_CC)/glycosylation_phen2CC_$PVALUE.txt enrichment_glycosylation_$PVALUE
+		ln -s single_term_enrichment_analysis_KEGG)/glycosylation_phen2KEGG_$PVALUE.txt enrichment_glycosylation_$PVALUE
+		ln -s single_term_enrichment_analysis_Reactome)/glycosylation_phen2Reactome_$PVALUE.txt enrichment_glycosylation_$PVALUE
+
+	done
+}

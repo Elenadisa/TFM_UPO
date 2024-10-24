@@ -1,0 +1,8 @@
+HP:0000054	Micropenis	0.000659289834156837
+HP:0008724	Hypoplasia of the ovary	0.0152638895527248
+HP:0000028	Cryptorchidism	0.0303861646280867
+HP:0000013	Hypoplasia of the uterus	0.039444415461247
+HP:0030019	Increased female libido	0.0408844388819363
+HP:0012855	Scrotal hyperpigmentation	0.0408844388819363
+HP:0012882	Hyperplastic labia majora	0.0408844388819363
+HP:0003241	External genital hypoplasia	0.0455936212987539

@@ -1,0 +1,294 @@
+---
+title: Orphanet Disorders of Glycosylation Study
+output: html_document
+---
+
+
+```{r  results='asis'}
+metric_table <- data[['orphanet_table_metrics.txt']]
+summary_metric_table <- data[['orpha_summary']]
+colnames(summary_metric_table) <- c("Metric", "Value")
+gene_metric_table <- data[['orphanet_gene_table']]
+colnames(gene_metric_table) <- c("Metric", "Value")
+
+
+load_comention_files <- function(data, column_names, path_column, header, col_name_vector, group1, group2){
+        factor_columns <- match(column_names, names(data))
+        factor_combinations <- unique(data[column_names])
+        all_data <- data.frame()
+        for(row in 1:nrow(factor_combinations)){
+                combination <- as.vector(t((factor_combinations[row,]))) #extract row AND convert to vector
+                check_combination <- data[factor_columns] == combination[col(data[factor_columns])]
+                name_list <- paste(combination, collapse='_')
+                paths <- data[[path_column]][which(apply(check_combination, 1, sum) == length(combination))]
+                count = 1
+
+                for(file_path in paths){
+                        files <- read.table(file_path, sep="\t", header=header)
+                        files$V4 <- NULL
+                        files <- cbind(files ,rep(c(paste(name_list)), nrow(files)))
+                        files <- cbind(files ,rep(c(paste(name_list,count, sep="_")), nrow(files)))
+                        if(startsWith(name_list, group1)){
+                          files <- cbind(files ,rep(c(paste(group1)), nrow(files)))
+                        }else{
+                          files <- cbind(files ,rep(c(paste(group2)), nrow(files)))
+                        }
+                        colnames(files) <- col_name_vector
+                        count <- count + 1
+
+                        all_data <- rbind(all_data, files)   
+                }             
+        }
+       
+        return(all_data)
+
+      }
+
+```
+
+## Step one: Datasets of Cdgs, genes, phenotypes and typical CDGs phenotypes  
+  
+  
+<div align="center">**Table 1**: Preprocesing data summary</div>  
+
+```{r  }
+  kable(summary_metric_table)   %>%
+  kable_classic(full_width = F, html_font = "Calibri", font_size = 16 ) %>% row_spec(0, bold = TRUE) %>% column_spec(1, bold = TRUE)
+  
+```
+  
+    
+## Step 2: Bipartite network to obtain phenotype-phenotype associations
+```
+In the following plot we can see the number of  totla pairs  and those which form the subnetwork with a HyI >= 2. 
+
+**Figure 1:** Number of total phenotype pairs and with a HyI >= 2.
+
+```{r  }
+grid.arrange(
+  produce_barplot("Total_phenotype_pairs", "All pairs", "Number of pairs"),
+  produce_barplot("Pairs_HyI_2", "Pairs HyI 2", "Number of pairs"),
+  ncol = 2
+)
+
+```
+  
+In the following plot we can see the number of CDG pairs which form the subnetwork with a HyI >= 2. 
+  
+**Figure 2:** Number of CDGs phenotype pairs with a HyI >= 2.
+
+```{r  }
+produce_barplot("glycosylation_pairs_number", "Significant CDG Pairs Number Orphanet", "Number of pairs")
+  
+```
+  
+<div align="center">**Table 2:** Number of phenotype pairs with a HyI >= 2.</div>  
+   
+```{r  }
+kable(ddply(metric_table, .(Type), summarize, "All Pairs Number" = paste(round(mean(Total_phenotype_pairs),3), "\U00B1", round(sd(Total_phenotype_pairs),3)), "HyI 2 Pairs Number" = paste(round(mean(Pairs_HyI_2),3), "\U00B1", round(sd(Pairs_HyI_2),3)), "CDG Pairs Number" = paste(round(mean(glycosylation_pairs_number),3), "\U00B1", round(sd(glycosylation_pairs_number),3)))) %>%
+kable_classic(full_width = F, html_font = "Calibri", font_size = 16 ) %>% row_spec(0, bold = TRUE) %>% column_spec(1, bold = TRUE)
+  
+```
+  
+
+### Topological analysis
+
+#### MEAN
+```{r  echo=FALSE, warning=FALSE, message=FALSE}
+  kable(ddply(metric_table, .(Type), summarize, Clustering.coef= mean(Clustering.coef), Diameter = mean(Diameter), Average.minimum.path= mean(Average.minimum.path), Number.of.nodes = mean(Number.of.nodes)))  
+
+```
+
+#### STANDARD DEVIATION
+
+```{r  echo=FALSE, warning=FALSE, message=FALSE}
+  kable(ddply(metric_table, .(Type), summarize, Clustering.coef= sd(Clustering.coef), Diameter = sd(Diameter), Average.minimum.path= sd(Average.minimum.path), Number.of.nodes = sd(Number.of.nodes)))  
+
+```  
+  
+**Table 3**: Topological Analysis results from the different Pairs Lists. 
+  
+
+
+## Step 3: Tripartite network to obtain phenotype-function pairs
+  
+In this step we will get phenotype-genes pairs. Through a functional assignment of these genes we can get phenotype-function pairs.
+  
+<div align="center">**Table 4** Tripartite results general summary.</div>  
+    
+```{r  }
+  
+  kable(gene_metric_table) %>%
+  kable_classic(full_width = F, html_font = "Calibri", font_size = 16 ) %>% row_spec(0, bold = TRUE) %>% column_spec(1, bold = TRUE)
+
+```
+  
+## Step 4: Linkcomm Cluster Analysis
+  
+With linkcomm R package we obtain a number of clusters for each network.  In the following plots we show some results of the clustering process. By one hand we have measured the number of clusters obtained and the average number of nodes of each cluster.  
+  
+**Figure 3** Cluster analysis summary. 
+
+```{r  }
+  produce_barplot("linkcomm_cluster_number", "Cluster Number Orphanet", "Number of clusters")
+
+``` 
+  
+<div align="center">**Table 5** Cluster analysis summary.</div>  
+
+```{r  }
+
+kable(ddply(metric_table, .(Type), summarize, "Cluster Number" = paste(round(mean(linkcomm_cluster_number),3), "\U00B1" , round(sd(linkcomm_cluster_number),3))), align = 'c') %>% 
+kable_classic(full_width = T, html_font = "Calibri", font_size = 16) %>% row_spec(0, bold = TRUE) %>% column_spec(1, bold = TRUE)
+  
+```
+
+#### Functional Coherent Clusters Linkcomm
+  
+**Figure 4** Functional coherent clusters.
+  
+```{r  }
+grid.arrange(
+  produce_barplot("linkcomm_cluster_with_70_coherence_0.05", "70 % Coherence", "Number of clusters"),
+  produce_barplot("linkcomm_cluster_with_50_coherence_0.05", "50 % Coherence", "Number of clusters"),
+  ncol = 2
+)
+
+``` 
+  
+<div align="center">**Table 6** Functional coherent clusters summary.</div>
+    
+```{r  }
+  
+kable(ddply(metric_table, .(Type), summarize, "Cluster with 70 coherence_0.05" = paste(round(mean(linkcomm_cluster_with_70_coherence_0.05),3), "\U00B1" , round(sd(linkcomm_cluster_with_70_coherence_0.05),3)), "Cluster with 50 coherence_0.05" = paste(round(mean(linkcomm_cluster_with_50_coherence_0.05),3), "\U00B1" , round(sd(linkcomm_cluster_with_50_coherence_0.05),3))), align = 'c') %>% 
+kable_classic(full_width = T, html_font = "Calibri", font_size = 16) %>% row_spec(0, bold = TRUE) %>% column_spec(1, bold = TRUE)
+```
+
+
+**Figure 5** Functional coherent clusters without GO.
+  
+```{r  }
+grid.arrange(
+  produce_barplot("linkcomm_cluster_with_70_coherence_without_go_0.05", "70 % Coherence", "Number of clusters"),
+  produce_barplot("linkcomm_cluster_with_50_coherence_without_go_0.05", "50 % Coherence", "Number of clusters"),
+  ncol = 2
+)
+
+``` 
+  
+<div align="center">**Table 7** Functional coherent clusters summary.</div>
+    
+```{r  }
+  
+kable(ddply(metric_table, .(Type), summarize, "Cluster with 70 coherence_0.05" = paste(round(mean(linkcomm_cluster_with_70_coherence_without_go_0.05),3), "\U00B1" , round(sd(linkcomm_cluster_with_70_coherence_without_go_0.05),3)), "Cluster with 50 coherence_0.05" = paste(round(mean(linkcomm_cluster_with_50_coherence_without_go_0.05),3), "\U00B1" , round(sd(linkcomm_cluster_with_50_coherence_without_go_0.05),3))), align = 'c') %>% 
+kable_classic(full_width = T, html_font = "Calibri", font_size = 16) %>% row_spec(0, bold = TRUE) %>% column_spec(1, bold = TRUE)
+```
+
+
+
+#### GO Biological Process
+  
+**Figure 6** Functional coherent clusters GO Biological Process.
+
+```{r  }
+grid.arrange(
+  produce_barplot("linkcomm_cluster_with_70_coherence_BP_0.05", "70 % Coherence", "Number of clusters"),
+  produce_barplot("linkcomm_cluster_with_50_coherence_BP_0.05", "50 % Coherence", "Number of clusters"),
+  ncol = 2
+)
+
+```
+   
+<div align="center">**Table 8** Functional coherent GO BP clusters summary.</div>
+  
+```{r  }
+  
+kable(ddply(metric_table, .(Type), summarize, "Cluster with 70 coherence 0.05 BP" = paste(round(mean(linkcomm_cluster_with_70_coherence_BP_0.05),3), "\U00B1" , round(sd(linkcomm_cluster_with_70_coherence_BP_0.05),3)), "Cluster with 50 coherence 0.05 BP" = paste(round(mean(linkcomm_cluster_with_50_coherence_BP_0.05),3), "\U00B1" , round(sd(linkcomm_cluster_with_50_coherence_BP_0.05),3))), align = 'c') %>% 
+kable_classic(full_width = T, html_font = "Calibri", font_size = 16) %>% row_spec(0, bold = TRUE) %>% column_spec(1, bold = TRUE)
+```
+
+#### GO Molecular Function
+
+**Figure 7** Functional coherent clusters GO Molecular Function.
+
+```{r  }
+grid.arrange(
+  produce_barplot("linkcomm_cluster_with_70_coherence_MF_0.05", "70 % Coherence", "Number of clusters"),
+  produce_barplot("linkcomm_cluster_with_50_coherence_0.05", "50 % Coherence", "Number of clusters"),
+  ncol = 2
+)
+
+```
+  
+<div align="center">**Table 9** Functional coherent GO MF clusters summary.</div>
+  
+```{r  }
+  
+kable(ddply(metric_table, .(Type), summarize, "Cluster with 70 coherence 0.05 MF" = paste(round(mean(linkcomm_cluster_with_70_coherence_MF_0.05),3), "\U00B1" , round(sd(linkcomm_cluster_with_70_coherence_MF_0.05),3)), "Cluster with 50 coherence 0.05 MF" = paste(round(mean(linkcomm_cluster_with_50_coherence_MF_0.05),3), "\U00B1" , round(sd(linkcomm_cluster_with_50_coherence_MF_0.05),3))), align = 'c') %>% 
+kable_classic(full_width = T, html_font = "Calibri", font_size = 16) %>% row_spec(0, bold = TRUE) %>% column_spec(1, bold = TRUE)
+```
+  
+#### GO Cellular Component
+
+**Figure 8** Functional coherent clusters GO Cellular Component.
+
+```{r  }
+grid.arrange(
+  produce_barplot("linkcomm_cluster_with_70_coherence_CC_0.05", "70 % Coherence", "Number of clusters"),
+  produce_barplot("linkcomm_cluster_with_50_coherence_CC_0.05", "50 % Coherence", "Number of clusters"),
+  ncol = 2
+)
+
+```
+  
+  <div align="center">**Table 10** Functional coherent GO CC clusters summary.</div>
+  
+```{r  }
+  
+kable(ddply(metric_table, .(Type), summarize, "Cluster with 70 coherence 0.05 CC" = paste(round(mean(linkcomm_cluster_with_70_coherence_CC_0.05),3), "\U00B1" , round(sd(linkcomm_cluster_with_70_coherence_CC_0.05),3)), "Cluster with 50 coherence 0.05 CC" = paste(round(mean(linkcomm_cluster_with_50_coherence_CC_0.05),3), "\U00B1" , round(sd(linkcomm_cluster_with_50_coherence_CC_0.05),3))), align = 'c') %>% 
+kable_classic(full_width = T, html_font = "Calibri", font_size = 16) %>% row_spec(0, bold = TRUE) %>% column_spec(1, bold = TRUE)
+```
+
+
+#### KEGG
+  
+**Figure 9** Functional coherent clusters KEGG.
+
+```{r  }
+grid.arrange(
+  produce_barplot("linkcomm_cluster_with_70_coherence_KEGG_0.05", "70 % Coherence", "Number of clusters"),
+  produce_barplot("linkcomm_cluster_with_50_coherence_KEGG_0.05", "50 % Coherence", "Number of clusters"),
+  ncol = 2
+)
+
+```
+  
+<div align="center">**Table 11** Functional coherent KEGG clusters summary.</div>
+  
+```{r  }
+  
+kable(ddply(metric_table, .(Type), summarize, "Cluster with 70 coherence 0.05 KEGG" = paste(round(mean(linkcomm_cluster_with_70_coherence_KEGG_0.05),3), "\U00B1" , round(sd(linkcomm_cluster_with_70_coherence_KEGG_0.05),3)), "Cluster with 50 coherence 0.05 KEGG" = paste(round(mean(linkcomm_cluster_with_50_coherence_KEGG_0.05),3), "\U00B1" , round(sd(linkcomm_cluster_with_50_coherence_BP_0.05),3))), align = 'c') %>% 
+kable_classic(full_width = T, html_font = "Calibri", font_size = 16) %>% row_spec(0, bold = TRUE) %>% column_spec(1, bold = TRUE)
+```
+  
+#### Reactome
+  
+**Figure 10** Functional coherent clusters Reactome.
+
+```{r  }
+grid.arrange(
+  produce_barplot("linkcomm_cluster_with_70_coherence_Reactome_0.05", "70 % Coherence", "Number of clusters"),
+  produce_barplot("linkcomm_cluster_with_50_coherence_Reactome_0.05", "50 % Coherence", "Number of clusters"),
+  ncol = 2
+)
+
+```
+  
+  <div align="center">**Table 12** Functional coherent Reactome clusters summary.</div>
+
+```{r  }
+  
+kable(ddply(metric_table, .(Type), summarize, "Cluster with 70 coherence 0.05 Reactome" = paste(round(mean(linkcomm_cluster_with_70_coherence_Reactome_0.05),3), "\U00B1" , round(sd(linkcomm_cluster_with_70_coherence_Reactome_0.05),3)), "Cluster with 50 coherence 0.05 Reactome" = paste(round(mean(linkcomm_cluster_with_50_coherence_Reactome_0.05),3), "\U00B1" , round(sd(linkcomm_cluster_with_50_coherence_Reactome_0.05),3))), align = 'c') %>% 
+kable_classic(full_width = T, html_font = "Calibri", font_size = 16) %>% row_spec(0, bold = TRUE) %>% column_spec(1, bold = TRUE)
+``` 
+

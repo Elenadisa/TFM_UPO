@@ -1,0 +1,56 @@
+HP:0008905	Rhizomelia	0.00029650617594143
+HP:0002673	Coxa valga	0.00029650617594143
+HP:0001234	Hitchhiker thumb	0.00165517135707336
+HP:0008981	Calf muscle hypertrophy	0.00192986275962165
+HP:0008807	Acetabular dysplasia	0.00205839120224373
+HP:0009826	Limb undergrowth	0.0023596934395375
+HP:0009824	Upper limb undergrowth	0.0031960893200156
+HP:0003325	Limb-girdle muscle weakness	0.00327378739105493
+HP:0001763	Pes planus	0.00392775230046175
+HP:0002813	Abnormal limb bone morphology	0.00483282392484927
+HP:0006118	Shortening of all distal phalanges of the fingers	0.00483282392484927
+HP:0004993	Slender long bones with narrow diaphyses	0.00483282392484927
+HP:0001762	Talipes equinovarus	0.00859717295665932
+HP:0009381	Short finger	0.00860936584900356
+HP:0010049	Short metacarpal	0.00862601763379133
+HP:0001156	Brachydactyly	0.0127283257070545
+HP:0003016	Metaphyseal widening	0.0173725941798501
+HP:0001230	Broad metacarpals	0.0222897788620261
+HP:0045060	Aplasia/hypoplasia involving bones of the extremities	0.0222897788620261
+HP:0006385	Short lower limbs	0.0222897788620261
+HP:0005922	Abnormal hand morphology	0.0222897788620261
+HP:0009487	Ulnar deviation of the hand	0.0222897788620261
+HP:0003691	Scapular winging	0.0252976692312338
+HP:0001847	Long hallux	0.0303823339259391
+HP:0001374	Congenital hip dislocation	0.0346077989580061
+HP:0100807	Long fingers	0.0346077989580061
+HP:0003707	Calf muscle pseudohypertrophy	0.039444415461247
+HP:0010557	Overlapping fingers	0.039444415461247
+HP:0009028	Generalized weakness of limb muscles	0.0408844388819363
+HP:0008829	Delayed femoral head ossification	0.0408844388819363
+HP:0040072	Abnormal forearm bone morphology	0.0408844388819363
+HP:0004037	Abnormal ulnar epiphysis morphology	0.0408844388819363
+HP:0004002	Flattened radial epiphyses	0.0408844388819363
+HP:0012427	Increased femoral anteversion	0.0408844388819363
+HP:0003977	Deformed radius	0.0408844388819363
+HP:0003959	Deformed forearm bones	0.0408844388819363
+HP:0030883	Femoroacetabular impingement	0.0408844388819363
+HP:0009768	Broad phalanges of the hand	0.0408844388819363
+HP:0012107	Increased fibular diameter	0.0408844388819363
+HP:0008108	Advanced tarsal ossification	0.0408844388819363
+HP:0010486	Abnormality of the hypothenar eminence	0.0408844388819363
+HP:0009767	Aplasia/Hypoplasia of the phalanges of the hand	0.0408844388819363
+HP:0010173	Aplasia/Hypoplasia of the phalanges of the toes	0.0408844388819363
+HP:0003733	Thigh hypertrophy	0.0408844388819363
+HP:0009970	Partial duplication of the proximal phalanx of the 3rd finger	0.0408844388819363
+HP:0009966	Complete duplication of the middle phalanx of the 3rd finger	0.0408844388819363
+HP:0006152	Proximal symphalangism of hands	0.0408844388819363
+HP:0009608	Complete duplication of proximal phalanx of the thumb	0.0408844388819363
+HP:0100347	Tibial deviation of the 5th toe	0.0408844388819363
+HP:0100345	Tibial deviation of the 2nd toe	0.0408844388819363
+HP:0006114	Multiple palmar creases	0.0408844388819363
+HP:0008113	Multiple plantar creases	0.0408844388819363
+HP:0006165	Proportionate shortening of all digits	0.0408844388819363
+HP:0004681	Deep longitudinal plantar crease	0.0408844388819363
+HP:0010510	Hypermobility of toe joints	0.0408844388819363
+HP:0100899	Sclerosis of finger phalanx	0.0408844388819363

@@ -1,0 +1,5 @@
+HP:0001508	Failure to thrive	1.03127621127097e-05
+HP:0008905	Rhizomelia	0.00029650617594143
+HP:0008873	Disproportionate short-limb short stature	0.0251918739588562
+HP:0003498	Disproportionate short stature	0.0251918739588562
+HP:0001511	Intrauterine growth retardation	0.0339074623994161

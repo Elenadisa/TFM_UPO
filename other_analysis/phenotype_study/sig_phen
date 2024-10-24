@@ -1,0 +1,347 @@
+HP:0003186	Inverted nipples	1.40597558424903e-16
+HP:0003642	Type I transferrin isoform profile	2.21918325749665e-13
+HP:0005543	Reduced protein C activity	1.54711756253494e-10
+HP:0000253	Progressive microcephaly	8.44062291797619e-10
+HP:0001929	Reduced factor XI activity	1.1964591593445e-09
+HP:0004855	Reduced protein S activity	4.02082401306635e-09
+HP:0003256	Abnormality of the coagulation cascade	4.10609704099404e-09
+HP:0001976	Reduced antithrombin III activity	5.20472292209562e-09
+HP:0002910	Elevated circulating hepatic transaminase concentration	1.31307713784579e-08
+HP:0001999	Abnormal facial shape	2.51901090599478e-08
+HP:0000343	Long philtrum	3.08240614833572e-08
+HP:0008947	Infantile muscular hypotonia	4.67260683315005e-07
+HP:0030099	Reduced muscle fiber alpha dystroglycan	6.00399817951102e-07
+HP:0012301	Type II transferrin isoform profile	6.00399817951102e-07
+HP:0001321	Cerebellar hypoplasia	6.05821509289794e-07
+HP:0001250	Seizure	1.07510975260186e-06
+HP:0001272	Cerebellar atrophy	1.64759849117209e-06
+HP:0003560	Muscular dystrophy	1.73328623199646e-06
+HP:0001290	Generalized hypotonia	1.80847898392289e-06
+HP:0002521	Hypsarrhythmia	1.95442018984834e-06
+HP:0009125	Lipodystrophy	3.57195291912557e-06
+HP:0000316	Hypertelorism	3.68348023300445e-06
+HP:0000219	Thin upper lip vermilion	3.85475360628045e-06
+HP:0001508	Failure to thrive	1.03127621127097e-05
+HP:0003160	Abnormal isoelectric focusing of serum transferrin	1.2750035705093e-05
+HP:0030046	Hypoglycosylation of alpha-dystroglycan	1.2750035705093e-05
+HP:0012448	Delayed myelination	2.60701539564946e-05
+HP:0003236	Elevated circulating creatine kinase concentration	2.93620643716024e-05
+HP:0000938	Osteopenia	3.33623507870365e-05
+HP:0002243	Protein-losing enteropathy	3.70493074793767e-05
+HP:0012345	Abnormal glycosylation	6.63450731854039e-05
+HP:0001305	Dandy-Walker malformation	6.87611871862322e-05
+HP:0001263	Global developmental delay	0.000140647653395685
+HP:0000470	Short neck	0.000148341083169782
+HP:0012469	Infantile spasms	0.000152559171469433
+HP:0000973	Cutis laxa	0.000154044306868272
+HP:0011968	Feeding difficulties	0.000234965411528757
+HP:0002947	Cervical kyphosis	0.000257482069743353
+HP:0040246	Reduced antithrombin antigen	0.000257482069743353
+HP:0003563	Decreased LDL cholesterol concentration	0.000257482069743353
+HP:0008905	Rhizomelia	0.00029650617594143
+HP:0002673	Coxa valga	0.00029650617594143
+HP:0000648	Optic atrophy	0.000316174975014189
+HP:0002119	Ventriculomegaly	0.00042938985545709
+HP:0002079	Hypoplasia of the corpus callosum	0.000457229115391755
+HP:0000252	Microcephaly	0.000519186213295567
+HP:0012762	Cerebral white matter atrophy	0.00057840980771482
+HP:0005272	Prominent nasolabial fold	0.000624580120800744
+HP:0000054	Micropenis	0.000659289834156837
+HP:0001249	Intellectual disability	0.000693076532582517
+HP:0000319	Smooth philtrum	0.000758720585954398
+HP:0000369	Low-set ears	0.000857781119887049
+HP:0012704	Widened subarachnoid space	0.00101038186283917
+HP:0008434	Hypoplastic cervical vertebrae	0.00121211093412211
+HP:0002240	Hepatomegaly	0.00145104387616153
+HP:0000565	Esotropia	0.00147938205826126
+HP:0002059	Cerebral atrophy	0.00162580364929164
+HP:0012050	Anasarca	0.00165517135707336
+HP:0001234	Hitchhiker thumb	0.00165517135707336
+HP:0100865	Broad ischia	0.00165517135707336
+HP:0006557	Polycystic liver disease	0.00165517135707336
+HP:0012363	Decreased sialylation of O-linked protein glycosylation	0.00165517135707336
+HP:0011995	Atrial septal dilatation	0.00165517135707336
+HP:0008676	Congenital megaureter	0.00165517135707336
+HP:0003414	Atlantoaxial dislocation	0.00165517135707336
+HP:0002421	Poor head control	0.00170119127609346
+HP:0012385	Camptodactyly	0.00180920849170265
+HP:0008981	Calf muscle hypertrophy	0.00192986275962165
+HP:0008807	Acetabular dysplasia	0.00205839120224373
+HP:0009826	Limb undergrowth	0.0023596934395375
+HP:0003073	Hypoalbuminemia	0.0023596934395375
+HP:0002089	Pulmonary hypoplasia	0.00248139926233461
+HP:0002751	Kyphoscoliosis	0.00257773452925762
+HP:0000218	High palate	0.00259501840610024
+HP:0001561	Polyhydramnios	0.00260238011493099
+HP:0003026	Short long bone	0.00285527571524325
+HP:0000463	Anteverted nares	0.00314956158905492
+HP:0002650	Scoliosis	0.00315916201900377
+HP:0010851	EEG with burst suppression	0.0031960893200156
+HP:0010850	EEG with spike-wave complexes	0.0031960893200156
+HP:0009824	Upper limb undergrowth	0.0031960893200156
+HP:0003325	Limb-girdle muscle weakness	0.00327378739105493
+HP:0000474	Thickened nuchal skin fold	0.00327378739105493
+HP:0001265	Hyporeflexia	0.0036270346504901
+HP:0002020	Gastroesophageal reflux	0.00381520754128616
+HP:0001763	Pes planus	0.00392775230046175
+HP:0002761	Generalized joint hypermobility	0.00414830155482693
+HP:0012379	Abnormal circulating enzyme concentration or activity	0.00429483662091474
+HP:0008443	Neuropathic spinal arthropathy	0.004652698491032
+HP:0002401	Stroke-like episode	0.004652698491032
+HP:0003551	Difficulty climbing stairs	0.00479167837135463
+HP:0011443	Abnormality of coordination	0.00483282392484927
+HP:0010989	Abnormality of the intrinsic pathway	0.00483282392484927
+HP:0002813	Abnormal limb bone morphology	0.00483282392484927
+HP:0001407	Hepatic cysts	0.00483282392484927
+HP:0006118	Shortening of all distal phalanges of the fingers	0.00483282392484927
+HP:0004582	Irregularity of vertebral bodies	0.00483282392484927
+HP:0004993	Slender long bones with narrow diaphyses	0.00483282392484927
+HP:0008151	Prolonged prothrombin time	0.0051682706254304
+HP:0000707	Abnormality of the nervous system	0.00562415651087075
+HP:0000924	Abnormality of the skeletal system	0.00563688008145573
+HP:0001410	Decreased liver function	0.00634387179886238
+HP:0011024	Abnormality of the gastrointestinal tract	0.00634387179886238
+HP:0010818	Generalized tonic seizure	0.00634387179886238
+HP:0002506	Diffuse cerebral atrophy	0.00634387179886238
+HP:0011344	Severe global developmental delay	0.00678606881263537
+HP:0000969	Edema	0.00715480487105453
+HP:0000545	Myopia	0.00773091411032389
+HP:0001762	Talipes equinovarus	0.00859717295665932
+HP:0009381	Short finger	0.00860936584900356
+HP:0000830	Anterior hypopituitarism	0.00860936584900356
+HP:0001302	Pachygyria	0.00862601763379133
+HP:0010804	Tented upper lip vermilion	0.00862601763379133
+HP:0010049	Short metacarpal	0.00862601763379133
+HP:0007457	Prominent veins on trunk	0.00940816577995519
+HP:0007260	Type II lissencephaly	0.00940816577995519
+HP:0002286	Fair hair	0.00940816577995519
+HP:0030197	Fatigable weakness of skeletal muscles	0.00940816577995519
+HP:0010864	Intellectual disability, severe	0.00971363974534326
+HP:0005616	Accelerated skeletal maturation	0.0098433049805929
+HP:0001382	Joint hypermobility	0.0107262811531158
+HP:0001928	Abnormality of coagulation	0.0108974588041564
+HP:0001644	Dilated cardiomyopathy	0.0110464075426282
+HP:0003645	Prolonged partial thromboplastin time	0.0111423605110584
+HP:0000486	Strabismus	0.0118696431916602
+HP:0000592	Blue sclerae	0.0126227674342569
+HP:0001156	Brachydactyly	0.0127283257070545
+HP:0010819	Atonic seizure	0.0127853737609006
+HP:0002342	Intellectual disability, moderate	0.0139480405362573
+HP:0002850	Decreased circulating total IgM	0.0140608801468347
+HP:0012444	Brain atrophy	0.014194068708607
+HP:0003196	Short nose	0.0144031917455451
+HP:0006956	Lateral ventricle dilatation	0.0148705098251732
+HP:0000368	Low-set, posteriorly rotated ears	0.0148788283710215
+HP:0002098	Respiratory distress	0.0148826657180314
+HP:0030047	Abnormal lateral ventricle morphology	0.0152638895527248
+HP:0025169	Left ventricular systolic dysfunction	0.0152638895527248
+HP:0007552	Abnormal subcutaneous fat tissue distribution	0.0152638895527248
+HP:0003403	EMG: decremental response of compound muscle action potential to repetitive nerve stimulation	0.0152638895527248
+HP:0025167	Fragmented elastic fibers in the dermis	0.0152638895527248
+HP:0001476	Delayed closure of the anterior fontanelle	0.0152638895527248
+HP:0006891	Thick cerebral cortex	0.0152638895527248
+HP:0002265	Large fleshy ears	0.0152638895527248
+HP:0008724	Hypoplasia of the ovary	0.0152638895527248
+HP:0003375	Narrow greater sciatic notch	0.0152638895527248
+HP:0001433	Hepatosplenomegaly	0.0153190080303779
+HP:0000501	Glaucoma	0.015968125830501
+HP:0001252	Hypotonia	0.0171211208800222
+HP:0002282	Gray matter heterotopia	0.0173725941798501
+HP:0003016	Metaphyseal widening	0.0173725941798501
+HP:0005280	Depressed nasal bridge	0.0188806825219298
+HP:0000750	Delayed speech and language development	0.0194996645190365
+HP:0000974	Hyperextensible skin	0.0196845012601484
+HP:0000175	Cleft palate	0.0201578149615415
+HP:0007392	Excessive wrinkled skin	0.0210822327273935
+HP:0007366	Atrophy/Degeneration affecting the brainstem	0.0210822327273935
+HP:0002120	Cerebral cortical atrophy	0.0214584637087568
+HP:0001230	Broad metacarpals	0.0222897788620261
+HP:0001977	Abnormal thrombosis	0.0222897788620261
+HP:0045060	Aplasia/hypoplasia involving bones of the extremities	0.0222897788620261
+HP:0006385	Short lower limbs	0.0222897788620261
+HP:0007973	Retinal dysplasia	0.0222897788620261
+HP:0005922	Abnormal hand morphology	0.0222897788620261
+HP:0009487	Ulnar deviation of the hand	0.0222897788620261
+HP:0009124	Abnormal adipose tissue morphology	0.0222897788620261
+HP:0001562	Oligohydramnios	0.0240290150409531
+HP:0000717	Autism	0.0248656934554303
+HP:0012447	Abnormal myelination	0.0251918739588562
+HP:0011003	High myopia	0.0251918739588562
+HP:0001804	Hypoplastic fingernail	0.0251918739588562
+HP:0008873	Disproportionate short-limb short stature	0.0251918739588562
+HP:0003498	Disproportionate short stature	0.0251918739588562
+HP:0003691	Scapular winging	0.0252976692312338
+HP:0001789	Hydrops fetalis	0.0252976692312338
+HP:0040288	Nasogastric tube feeding	0.0252976692312338
+HP:0000510	Rod-cone dystrophy	0.0252976692312338
+HP:0012443	Abnormal brain morphology	0.0252976692312338
+HP:0000518	Cataract	0.0286518691567701
+HP:0001871	Abnormality of blood and blood-forming tissues	0.0303823339259391
+HP:0007333	Hypoplasia of the frontal lobes	0.0303823339259391
+HP:0001027	Soft, doughy skin	0.0303823339259391
+HP:0003311	Hypoplasia of the odontoid process	0.0303823339259391
+HP:0001591	Bell-shaped thorax	0.0303823339259391
+HP:0002334	Abnormal cerebellar vermis morphology	0.0303823339259391
+HP:0002350	Cerebellar cyst	0.0303823339259391
+HP:0003187	Breast hypoplasia	0.0303823339259391
+HP:0001847	Long hallux	0.0303823339259391
+HP:0011169	Generalized clonic seizure	0.0303823339259391
+HP:0007204	Diffuse white matter abnormalities	0.0303823339259391
+HP:0000028	Cryptorchidism	0.0303861646280867
+HP:0008936	Axial hypotonia	0.0316346947926962
+HP:0000160	Narrow mouth	0.0333965571757069
+HP:0000639	Nystagmus	0.0334018360775039
+HP:0001511	Intrauterine growth retardation	0.0339074623994161
+HP:0000541	Retinal detachment	0.0344703552403372
+HP:0000546	Retinal degeneration	0.0346077989580061
+HP:0001374	Congenital hip dislocation	0.0346077989580061
+HP:0002616	Aortic root aneurysm	0.0346077989580061
+HP:0003199	Decreased muscle mass	0.0346077989580061
+HP:0100807	Long fingers	0.0346077989580061
+HP:0004315	Decreased circulating IgG level	0.0346077989580061
+HP:0000347	Micrognathia	0.0346439686458248
+HP:0006532	Recurrent pneumonia	0.0354241453283388
+HP:0002121	Generalized non-motor (absence) seizure	0.0354241453283388
+HP:0011471	Gastrostomy tube feeding in infancy	0.0374596021999038
+HP:0002938	Lumbar hyperlordosis	0.0392524492847027
+HP:0000527	Long eyelashes	0.0392524492847027
+HP:0004430	Severe combined immunodeficiency	0.039444415461247
+HP:0002625	Deep venous thrombosis	0.039444415461247
+HP:0002361	Psychomotor deterioration	0.039444415461247
+HP:0000013	Hypoplasia of the uterus	0.039444415461247
+HP:0003707	Calf muscle pseudohypertrophy	0.039444415461247
+HP:0000932	Abnormal posterior cranial fossa morphology	0.039444415461247
+HP:0010557	Overlapping fingers	0.039444415461247
+HP:0020110	Bone fracture	0.039444415461247
+HP:0005108	Abnormal intervertebral disk morphology	0.039444415461247
+HP:0011842	Abnormal skeletal morphology	0.0399072853003455
+HP:0002283	Global brain atrophy	0.0399072853003455
+HP:0000478	Abnormality of the eye	0.0401018702349578
+HP:0002515	Waddling gait	0.0406040301352938
+HP:0025244	Subretinal pigment epithelium hemorrhage	0.0408844388819363
+HP:0003164	Hypothalamic gonadotropin-releasing hormone deficiency	0.0408844388819363
+HP:0009028	Generalized weakness of limb muscles	0.0408844388819363
+HP:0025534	Ocular melanocytosis	0.0408844388819363
+HP:0030205	Increased jitter at single fiber EMG	0.0408844388819363
+HP:0030202	Favorable response of weakness to acetylcholine esterase inhibitors	0.0408844388819363
+HP:0030191	Abnormal peripheral nervous system synaptic transmission	0.0408844388819363
+HP:0012512	Diffuse optic disc pallor	0.0408844388819363
+HP:0025264	Stiff ankle	0.0408844388819363
+HP:0008829	Delayed femoral head ossification	0.0408844388819363
+HP:0004664	Facial midline hemangioma	0.0408844388819363
+HP:0040072	Abnormal forearm bone morphology	0.0408844388819363
+HP:0004037	Abnormal ulnar epiphysis morphology	0.0408844388819363
+HP:0004002	Flattened radial epiphyses	0.0408844388819363
+HP:0012427	Increased femoral anteversion	0.0408844388819363
+HP:0030019	Increased female libido	0.0408844388819363
+HP:0003977	Deformed radius	0.0408844388819363
+HP:0003959	Deformed forearm bones	0.0408844388819363
+HP:0032510	Tendon pain	0.0408844388819363
+HP:0003406	Peripheral nerve compression	0.0408844388819363
+HP:0002318	Cervical myelopathy	0.0408844388819363
+HP:0000918	Scapular exostoses	0.0408844388819363
+HP:0030883	Femoroacetabular impingement	0.0408844388819363
+HP:0031625	Pseudoaneurysm	0.0408844388819363
+HP:0032061	Hypereosinophilia	0.0408844388819363
+HP:0009768	Broad phalanges of the hand	0.0408844388819363
+HP:0004565	Severe platyspondyly	0.0408844388819363
+HP:0011190	Uni- and bilateral multifocal epileptiform discharges	0.0408844388819363
+HP:0012107	Increased fibular diameter	0.0408844388819363
+HP:0008108	Advanced tarsal ossification	0.0408844388819363
+HP:0000895	Lateral clavicle hook	0.0408844388819363
+HP:0007456	Progressive reticulate hyperpigmentation	0.0408844388819363
+HP:0031293	Digital pitting scar	0.0408844388819363
+HP:0012855	Scrotal hyperpigmentation	0.0408844388819363
+HP:0031525	Keratoacanthoma	0.0408844388819363
+HP:0030442	Anal margin squamous cell carcinoma	0.0408844388819363
+HP:0007856	Punctate opacification of the cornea	0.0408844388819363
+HP:0500173	Reflex asystolic syncope	0.0408844388819363
+HP:0003540	Impaired platelet aggregation	0.0408844388819363
+HP:0003655	Reduced level of N-acetylglucosaminyltransferase II	0.0408844388819363
+HP:0008587	Mild neurosensory hearing impairment	0.0408844388819363
+HP:0031292	Cutaneous abscess	0.0408844388819363
+HP:0000793	Membranoproliferative glomerulonephritis	0.0408844388819363
+HP:0012592	Albuminuria	0.0408844388819363
+HP:0011858	Reduced factor IX activity	0.0408844388819363
+HP:0012882	Hyperplastic labia majora	0.0408844388819363
+HP:0031404	Impaired antigen-specific response	0.0408844388819363
+HP:0012509	Reduced thyroxin-binding globulin	0.0408844388819363
+HP:0008695	Transient nephrotic syndrome	0.0408844388819363
+HP:0012348	Decreased galactosylation of N-linked protein glycosylation	0.0408844388819363
+HP:0010486	Abnormality of the hypothenar eminence	0.0408844388819363
+HP:0040173	Abnormality of the tongue muscle	0.0408844388819363
+HP:0009767	Aplasia/Hypoplasia of the phalanges of the hand	0.0408844388819363
+HP:0010173	Aplasia/Hypoplasia of the phalanges of the toes	0.0408844388819363
+HP:0008529	Absence of acoustic reflex	0.0408844388819363
+HP:0005478	Prominent frontal sinuses	0.0408844388819363
+HP:0040047	Abnormal right hemidiaphragm morphology	0.0408844388819363
+HP:0011812	Agraphesthesia	0.0408844388819363
+HP:0012305	Coarctation of the descending aortic arch	0.0408844388819363
+HP:0011883	Abnormal platelet granules	0.0408844388819363
+HP:0003733	Thigh hypertrophy	0.0408844388819363
+HP:0006899	Fusion of the cerebellar hemispheres	0.0408844388819363
+HP:0010814	Abnormal position of hair whorl	0.0408844388819363
+HP:0004523	Long eyebrows	0.0408844388819363
+HP:0009970	Partial duplication of the proximal phalanx of the 3rd finger	0.0408844388819363
+HP:0009966	Complete duplication of the middle phalanx of the 3rd finger	0.0408844388819363
+HP:0006152	Proximal symphalangism of hands	0.0408844388819363
+HP:0009608	Complete duplication of proximal phalanx of the thumb	0.0408844388819363
+HP:0100347	Tibial deviation of the 5th toe	0.0408844388819363
+HP:0100345	Tibial deviation of the 2nd toe	0.0408844388819363
+HP:0100266	Synostosis of carpals/tarsals	0.0408844388819363
+HP:0000517	Abnormal lens morphology	0.0408844388819363
+HP:0006114	Multiple palmar creases	0.0408844388819363
+HP:0008113	Multiple plantar creases	0.0408844388819363
+HP:0008635	Urinary bladder wall hypertrophy	0.0408844388819363
+HP:0007441	Hyperpigmented/hypopigmented macules	0.0408844388819363
+HP:0006165	Proportionate shortening of all digits	0.0408844388819363
+HP:0004681	Deep longitudinal plantar crease	0.0408844388819363
+HP:0025025	Rectovestibular fistula	0.0408844388819363
+HP:0011271	Prominent tragus	0.0408844388819363
+HP:0011247	Prominent superior crus of antihelix	0.0408844388819363
+HP:0012358	Abnormal protein O-linked glycosylation	0.0408844388819363
+HP:0012347	Abnormal protein N-linked glycosylation	0.0408844388819363
+HP:0031869	Recurrent joint dislocation	0.0408844388819363
+HP:0003697	Scapuloperoneal amyotrophy	0.0408844388819363
+HP:0025330	Downgaze palsy	0.0408844388819363
+HP:0003282	Low alkaline phosphatase	0.0408844388819363
+HP:0010510	Hypermobility of toe joints	0.0408844388819363
+HP:0410292	Abnormal isohemagglutinin level	0.0408844388819363
+HP:0007041	Chronic lymphocytic meningitis	0.0408844388819363
+HP:0100899	Sclerosis of finger phalanx	0.0408844388819363
+HP:0031146	Impaired oral bolus formation	0.0408844388819363
+HP:0025458	Decreased CSF albumin concentration	0.0408844388819363
+HP:0025457	Decreased CSF protein concentration	0.0408844388819363
+HP:0030906	Suck reflex	0.0408844388819363
+HP:0020037	Astasia	0.0408844388819363
+HP:0040209	Decreased CSF biopterin level	0.0408844388819363
+HP:0030194	Fatigable weakness of speech muscles	0.0408844388819363
+HP:0012340	Decreased resting energy expenditure	0.0408844388819363
+HP:0410242	Abnormal circulating IgG level	0.0408844388819363
+HP:0410243	Abnormal circulating IgM level	0.0408844388819363
+HP:0410240	Abnormal circulating IgA level	0.0408844388819363
+HP:0410295	Complete or near-complete absence of specific antibody response to tetanus vaccine	0.0408844388819363
+HP:0410305	Partial absence of specific antibody response to Haemophilus influenzae type b (Hib) vaccine	0.0408844388819363
+HP:0011327	Posterior plagiocephaly	0.0408844388819363
+HP:0000759	Abnormal peripheral nervous system morphology	0.0408844388819363
+HP:0030092	Reduced muscle fiber merosin	0.0408844388819363
+HP:0008776	Abnormal renal artery morphology	0.0408844388819363
+HP:0032464	Ureteral hypoplasia	0.0408844388819363
+HP:0010763	Low insertion of columella	0.0408844388819363
+HP:0005678	Anterior atlanto-occipital dislocation	0.0408844388819363
+HP:0012727	Thoracic aortic aneurysm	0.0408844388819363
+HP:0006522	Repeated pneumothoraces	0.0408844388819363
+HP:0008569	Microtia, second degree	0.0408844388819363
+HP:0100819	Intestinal fistula	0.0408844388819363
+HP:0005182	Bicuspid pulmonary valve	0.0408844388819363
+HP:0001385	Hip dysplasia	0.0442381011575097
+HP:0000269	Prominent occiput	0.0455936212987539
+HP:0000998	Hypertrichosis	0.0455936212987539
+HP:0000308	Microretrognathia	0.0455936212987539
+HP:0003241	External genital hypoplasia	0.0455936212987539
+HP:0000431	Wide nasal bridge	0.0464204089492656
+HP:0010845	EEG with generalized slow activity	0.0493849060241655
+HP:0100874	Thick hair	0.0493849060241655
+HP:0005989	Redundant neck skin	0.0493849060241655
+HP:0100678	Premature skin wrinkling	0.0493849060241655
+HP:0003121	Limb joint contracture	0.0493849060241655

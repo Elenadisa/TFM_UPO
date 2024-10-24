@@ -1,0 +1,7 @@
+HP:0008676	Congenital megaureter	0.00165517135707336
+HP:0000793	Membranoproliferative glomerulonephritis	0.0408844388819363
+HP:0012592	Albuminuria	0.0408844388819363
+HP:0008695	Transient nephrotic syndrome	0.0408844388819363
+HP:0008635	Urinary bladder wall hypertrophy	0.0408844388819363
+HP:0008776	Abnormal renal artery morphology	0.0408844388819363
+HP:0032464	Ureteral hypoplasia	0.0408844388819363

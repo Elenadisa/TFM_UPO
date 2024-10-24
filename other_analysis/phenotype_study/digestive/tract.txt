@@ -1,0 +1,7 @@
+HP:0002243	Protein-losing enteropathy	3.70493074793767e-05
+HP:0002020	Gastroesophageal reflux	0.00381520754128616
+HP:0011024	Abnormality of the gastrointestinal tract	0.00634387179886238
+HP:0030442	Anal margin squamous cell carcinoma	0.0408844388819363
+HP:0025025	Rectovestibular fistula	0.0408844388819363
+HP:0031146	Impaired oral bolus formation	0.0408844388819363
+HP:0100819	Intestinal fistula	0.0408844388819363

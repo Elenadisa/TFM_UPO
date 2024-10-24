@@ -1,0 +1,5 @@
+HP:0002089	Pulmonary hypoplasia	0.00248139926233461
+HP:0002098	Respiratory distress	0.0148826657180314
+HP:0006532	Recurrent pneumonia	0.0354241453283388
+HP:0005478	Prominent frontal sinuses	0.0408844388819363
+HP:0006522	Repeated pneumothoraces	0.0408844388819363
