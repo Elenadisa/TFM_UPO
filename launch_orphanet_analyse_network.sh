@@ -9,8 +9,7 @@ export PATH=$current_dir'/scripts/rscripts:'$PATH
 
 
 #PATH TO build_networks.sh RESULTS
-data_source=$FSCRATCH'/disorders_glycosylation_upo/Orphanet/build_networks'
-bh_data_source=$FSCRATCH'/disorders_glycosylation_upo/Orphanet/bh_build_networks'
+data_source=PATH_TO_OUTPUT_FILES/disorders_glycosylation/Orphanet/build_networks
 
 #PATH TO DIRECTORY WITH PAIRS LISTS
 real_networks_source=$data_source"/ln_0000/real_networks"
@@ -29,8 +28,7 @@ ls $random_networks_source > orphanet_random_working_nets
 
 
 ## PATH TO THE DIRECTORY WHERE TO SAVE THE RESULTS
-mkdir $FSCRATCH'/disorders_glycosylation_upo/Orphanet'
-mkdir $FSCRATCH'/disorders_glycosylation_upo/Orphanet/analysed_networks'
+mkdir /PATH_TO_OUTPUT_FILES/disorders_glycosylation/Orphanet/analysed_networks
 
 
 
@@ -58,9 +56,9 @@ do
 	" | tr -d [:space:]`
 	
 	#FOR SLURM SYSTEM 
-	AutoFlow -w analyse_networks.af -o $FSCRATCH'/disorders_glycosylation_upo/Orphanet/analysed_networks/'$NETWORK -V $variables $1 -m 100gb -t '10:00:00' -n 'cal'
+	AutoFlow -w analyse_networks.af -o /PATH_TO_OUTPUT_FILES/disorders_glycosylation/Orphanet/analysed_networks/$NETWORK -V $variables $1 -m 100gb -t '10:00:00' -n 'cal'
 	#FOR LOCAL UNIX
-	#AutoFlow -w analyse_networks.af -o PATH_TO_OUTPUT_FILES/PhenoClusters/analysed_networks/Orphanet/$NETWORK -V $variables $1 -b
+	#AutoFlow -w analyse_networks.af -o /PATH_TO_OUTPUT_FILES/disorders_glycosylation/Orphanet/analysed_networks/$NETWORK -V $variables $1 -b
 done < orphanet_real_working_nets
 
 while read NETWORK
@@ -79,6 +77,7 @@ do
 	" | tr -d [:space:]`
 	
 	#FOR SLURM SYSTEM 
-	AutoFlow -w analyse_random_networks.af -o $FSCRATCH'/disorders_glycosylation_upo/Orphanet/analysed_networks/'$NETWORK -V $variables $1 -m 100gb -t '10:00:00' -n 'cal'
-	
+	AutoFlow -w analyse_random_networks.af -o /PATH_TO_OUTPUT_FILES/disorders_glycosylation/Orphanet/analysed_networks/$NETWORK -V $variables $1 -m 100gb -t '10:00:00' -n 'cal'
+	#FOR LOCAL UNIX
+	#AutoFlow -w analyse_networks.af -o /PATH_TO_OUTPUT_FILES/disorders_glycosylation/Orphanet/analysed_networks/$NETWORK -V $variables $1 -b
 done < orphanet_random_working_nets

@@ -17,8 +17,8 @@ current_dir=`pwd`
 
 mkdir results
 
-orphanet_build_results_source=/mnt2/fscratch/users/bio_267_uma/elenads/disorders_glycosylation_upo/Orphanet/build_networks
-orphanet_analysed_results_source=/mnt2/fscratch/users/bio_267_uma/elenads/disorders_glycosylation_upo/Orphanet/analysed_networks
+orphanet_build_results_source=/PATH_TO_OUTPUT_FILES/disorders_glycosylation/Orphanet/build_networks
+orphanet_analysed_results_source=/PATH_TO_OUTPUT_FILES/disorders_glycosylation/Orphanet/analysed_networks
 
 
 

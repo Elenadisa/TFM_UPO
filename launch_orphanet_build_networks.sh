@@ -89,6 +89,6 @@ variables=`echo -e "
 " | tr -d [:space:]`
 
 #FOR SLURM SYSTEMS
-AutoFlow -w build_networks.af -o $FSCRATCH'/disorders_glycosylation_upo/Orphanet/build_networks' -V $variables -m 100gb $1 -n cal -t '120:00:00'
+AutoFlow -w build_networks.af -o PATH_TO_OUTPUT_FILES/disorders_glycosylation/Orphanet/build_networks -V $variables -m 100gb $1 -n cal -t '120:00:00'
 #FOR LOCAL UNIX
-#AutoFlow -w build_networks.af -o PATH_TO_OUTPUT_FILES/PhenoClusters/build_networks/Orphanet -V $variables -b
+#AutoFlow -w build_networks.af -oPATH_TO_OUTPUT_FILES/disorders_glycosylation/Orphanet/build_networks -V $variables -b
